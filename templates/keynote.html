@@ -1,0 +1,57 @@
+{%  load staticfiles %}
+<html>
+
+<head>
+  <meta charset = "utf-8" />
+  <meta name = "keywords"
+        content = "conference, registration, preaching, seminar" />
+  <meta name = "description"
+        content = "The registration and informational website for a ministry conference" />
+  <meta name = "author"
+        content = " Spencer B. Newburn" />
+  <meta name = "robots"
+        content = "nofollow" />
+
+  <title>Local Activities</title>
+
+  <link href="{%  static "styles/webdefault.css" %}" rel="stylesheet" type="text/css"/>
+</head>
+
+
+<body>
+<header>
+    {% include "navigation.html" %}
+</header>
+
+<main>
+  <div class = "preacher1">
+    <img src = "{% static "images/preacher1.jpg" %}" alt = "Dave Davidson">
+    <h3>DAVE DAVIDSON</h3>
+    <h3>Dave is a preacher with 70 years of experience in the pulpit.
+    He looks about 10 years older that God, but i can assure you his lessons are as relevant now as they were
+    on the day of Pentecost.</h3>
+  </div>
+  <div class = "preacher2">
+    <img src = "{% static "images/preacher2.jpg" %}" alt = "Jeff Newguy">
+    <h3>JEFF NEWGUY</h3>
+    <h3>Jeff is a youth minister extraordinaire! I mean just look at him, he has a lizard mohawk!! </h3>
+  </div>
+  <div class = "preacher3">
+    <h1> Our Conference Speakers</h1>
+  </div>
+
+</main>
+
+<footer>
+  <small>
+    While this web site was created to satisfy the requirement of building a web site for an academic course at Regis
+    University, the views and opinions expressed on this web site are solely those of the original author and do not
+    necessarily represent the views and opinions of Regis University.
+  </small>
+</footer>
+
+</body>
+
+
+
+</html>

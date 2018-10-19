@@ -1,0 +1,60 @@
+{%  load staticfiles %}
+<!DOCTYPE html>
+
+<!--Student Name: Spencer Newburn
+    Assignment: CS336, Assignment 4
+    Date Created: 07/11/2018
+    Description: This project is the start of Conference Website -->
+
+<html lang = "en">
+<head>
+  <meta charset = "utf-8" />
+  <meta name = "keywords"
+        content = "conference, registration, preaching, seminar" />
+  <meta name = "description"
+        content = "The registration and informational website for a ministry conference" />
+  <meta name = "author"
+        content = " Spencer B. Newburn" />
+  <meta name = "robots"
+        content = "nofollow" />
+
+  <title>Home Screen</title>
+
+  <link href="{% static "styles/webdefault.css" %}" rel="stylesheet" type="text/css"/>
+</head>
+
+
+<body>
+<header>
+  {% include "navigation.html" %}
+</header>
+
+<main>
+  <h1>West Texas Ministers Conference</h1>
+  <p>Come for an uplifting and equipping experience. This training seminar will provide instruction and encouragement in
+  the key area of ministry. Youth ministers, Pulpit ministers, and Evangelists will all have something to gain Over the two
+  days. Prepare to leave on fire to bless your local congregation.</p>
+
+  <h3>Date: July 27-28, 2018</h3>
+  <p><img src = "{% static "images/moon.jpg" %}" alt = "moon" width = "500" height = "500" align = "left" />Location: On the Flipping MOON!!!!!
+  Transportation is included to the absolute BEST destination for getting close to God. Gaze down at the earth below as you learn
+  how you can best make and impact on the world around you.</p>
+</main>
+
+<footer>
+  <address>
+    <p><a href = "mail to: Spencer.Newburn@gmail.com"> Spencer.Newburn@gmail.com</a></p>
+    <p>456 Seventh Street, Denver</p>
+  </address>
+  <small>
+    While this web site was created to satisfy the requirement of building a web site for an academic course at Regis
+    University, the views and opinions expressed on this web site are solely those of the original author and do not
+    necessarily represent the views and opinions of Regis University.
+  </small>
+</footer>
+
+</body>
+
+
+
+</html>

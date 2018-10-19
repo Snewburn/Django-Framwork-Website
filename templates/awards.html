@@ -1,0 +1,68 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<!--Student Name: Spencer Newburn
+    Assignment: CS336, Assignment 4
+    Date Created: 07/11/2018
+    Description: This project is the start of Conference Website -->
+
+<html lang = "en">
+<head>
+  <meta charset = "utf-8" />
+  <meta name = "keywords"
+        content = "conference, registration, preaching, seminar" />
+  <meta name = "description"
+        content = "The registration and informational website for a ministry conference" />
+  <meta name = "author"
+        content = " Spencer B. Newburn" />
+  <meta name = "robots"
+        content = "nofollow" />
+
+  <title> Member Choice Awards</title>
+
+  <link href="{% static "styles/regStyle.css" %}" rel="stylesheet" type="text/css"/>
+</head>
+
+
+<body>
+<header>
+  {% include "navigation.html" %}
+</header>
+
+<h1>Who has the Holiest Bible Contest!!!</h1>
+<h2>Vote for one of these three entries</h2>
+
+<form id="Awards" action="{% url 'hello' %}" method="post">
+        {% csrf_token %}
+
+        {% for choice in AwardNominee %}
+<table>
+                <td colspan="4"><b>{{ choice.Name }}</b></td>
+                <td colspan="4"><b>{{ choice.Description }}</b></td>
+                <td colspan="4"><b>{{ choice.Image_name }}</b></td>
+                <td colspan="4"><b>{{ choice.Num_Votes }}</b></td>
+                <td><input type="radio" title="{{ choice.Name }}" value="{{ choice.Name }}"
+                           name="vote"
+                           class="radio">Vote for {{ choice.Name }} </td>
+ </table>
+         {% endfor %}
+    <td colspan="4"><input type="submit" name="vtbtn" value="Vote"/></td>
+  </form>
+
+
+<main>
+</main>
+
+<footer>
+  <small>
+    While this web site was created to satisfy the requirement of building a web site for an academic course at Regis
+      University, the views and opinions expressed on this web site are solely those of the original author and do not
+      necessarily represent the views and opinions of Regis University.
+  </small>
+</footer>
+
+</body>
+
+
+
+</html>

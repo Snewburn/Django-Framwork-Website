@@ -1,0 +1,138 @@
+{%  load staticfiles %}
+<html>
+
+<head>
+  <meta charset = "utf-8" />
+  <meta name = "keywords"
+        content = "conference, registration, preaching, seminar" />
+  <meta name = "description"
+        content = "The registration and informational website for a ministry conference" />
+  <meta name = "author"
+        content = " Spencer B. Newburn" />
+  <meta name = "robots"
+        content = "nofollow" />
+
+  <title>workshop Schedule</title>
+
+  <link href="{% static "styles/webdefault.css"%}" rel="stylesheet" type="text/css"/>
+</head>
+
+
+<body>
+<header>
+  {% include "navigation.html" %}
+</header>
+
+<main>
+  <table class = "classTable">
+    <thread>
+      <tr>
+        <th scope = "col">Day</th>
+        <th scope = "col">Session</th>
+        <th scope = "col">Workshop Title</th>
+        <th scope = "col">Speaker</th>
+        <th scope = "col">Room</th>
+        <th scope = "col">Time</th>
+      </tr>
+    </thread>
+    <tbody>
+      <tr>
+        <th rowspan = "4">Day 1</th>
+        <th rowspan = "4">Session 1</th>
+        <th> Pulpit - Structuring the Week</th>
+        <th> Mr. Davidson</th>
+        <th> Room 1</th>
+        <th> 1:00pm - 3:30pm</th>
+      </tr>
+      <tr>
+        <th> Youth - Family based Youth ministry</th>
+        <th> Mr ?</th>
+        <th> Room 2</th>
+        <th> 1:00pm - 3:30pm</th>
+      </tr>
+      <tr>
+        <th> Evangelism - Why</th>
+        <th> Mr?</th>
+        <th> Room 3</th>
+        <th> 1:00pm - 3:30pm</th>
+      </tr>
+      <tr>
+        <th colspan="6"></th>
+      </tr>
+      <tr>
+        <th colspan = "6"></th>
+      </tr>
+      <tr>
+        <th colspan="6"></th>
+      </tr>
+      <tr>
+        <th colspan = "6"></th>
+      </tr>
+      <tr>
+        <th rowspan = "12">Day 2</th>
+        <th rowspan = "4">Session 2</th>
+        <th>Pulpit - The heart of preaching</th>
+        <th> Speaker</th>
+        <th>Room 1</th>
+        <th>9:00am - noon</th>
+      </tr>
+      <tr>
+        <th>Youth - Running a church summer camp</th>
+        <th>Speaker</th>
+        <th>Room 2</th>
+        <th>9:00am - noon</th>
+      </tr>
+      <tr>
+        <th>Evangelism - HOW</th>
+        <th>Speaker</th>
+        <th>Room 3</th>
+        <th>9:00am - noon</th>
+      </tr>
+      <tr>
+        <th colspan="6"></th>
+      </tr>
+      <tr>
+        <th colspan = "6"></th>
+      </tr>
+      <tr>
+        <th colspan="6"></th>
+      </tr>
+      <tr>
+        <th colspan = "6"></th>
+      </tr>
+      <tr>
+        <th rowspan = "3">Session 3</th>
+        <th>Pulpit - Sermons that are effective</th>
+        <th> Speaker</th>'
+        <th> Room 1</th>
+        <th>1:00pm - 3:30pm</th>
+      </tr>
+      <tr>
+        <th>Youth - Crises Intervention</th>
+        <th>Speaker</th>
+        <th>Room 2</th>
+        <th>1:00pm - 3:30pm</th>
+      </tr>
+      <tr>
+        <th>Evangelism - Building a culture of evangelism</th>
+        <th>Speaker</th>
+        <th>Room 3</th>
+        <th>1:00pm - 3:30pm</th>
+      </tr>
+    </tbody>
+  </table>
+</main>
+
+<footer>
+  <small>
+    While this web site was created to satisfy the requirement of building a web site for an academic course at Regis
+    University, the views and opinions expressed on this web site are solely those of the original author and do not
+    necessarily represent the views and opinions of Regis University.
+  </small>
+</footer>
+
+</body>
+
+
+
+</html>

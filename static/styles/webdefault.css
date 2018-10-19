@@ -1,0 +1,48 @@
+
+h1 { font-family: fantasy, Serif; color: aliceblue}
+h2 { font-family: Arial, serif; color: aliceblue }
+
+h3 { font-family: "Bell MT", serif; color: aliceblue }
+
+p { font-family: "Baskerville Old Face", serif; font-size: 25px; color: aliceblue}
+
+.myTable { font-family: "Baskerville Old Face", serif; font-size: 16px; color: aliceblue; background-color: #555555}
+
+.row1 {font-family: Broadway, serif; }
+
+.myList { color: antiquewhite}
+
+.listElem { font-family: "Agency FB", serif; font-size: x-large; color: #b3d4fc}
+
+nav { color: #b3d4fc}
+
+header { color: aqua}
+
+* { background-color: black}
+
+.menu1 { font-family: Agency FB, serif; color: #b3d4fc; position: fixed; top: 200px; left: 0px; padding: 10px; margin: 0px;
+background-color: black}
+
+.menu2 { font-family: Agency FB, serif; color: #b3d4fc; position: fixed; top: 200px; left: 500px; padding: 10px; margin: 0px;
+background-color: black}
+
+.menu3 { font-family: Agency FB, serif; color: #b3d4fc; position: fixed; top: 600px; left: 100px; }
+
+.preacher1 {position: fixed; top: 200px; left: 100px; width: 200px }
+
+.preacher2 {position: fixed; top: 200px; left: 400px; width: 200px }
+
+.preacher3 {position: fixed; top: 600px; left: 50px; font-size: xx-large}
+
+.classTable { color: #b3d4fc; padding: 10px}
+
+.form {color: #b3d4fc}
+
+.regSections { color: #b3d4fc; font-size: xx-large}
+
+input {background-color: #000000}
+
+form {color: #b3d4fc}
+
+button {text-decoration-color:  #b3d4fc}
+

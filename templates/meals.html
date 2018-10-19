@@ -1,0 +1,61 @@
+{%  load staticfiles %}
+<html>
+
+<head>
+  <meta charset = "utf-8" />
+  <meta name = "keywords"
+        content = "conference, registration, preaching, seminar" />
+  <meta name = "description"
+        content = "The registration and informational website for a ministry conference" />
+  <meta name = "author"
+        content = " Spencer B. Newburn" />
+  <meta name = "robots"
+        content = "nofollow" />
+
+  <title>Meals</title>
+
+  <link href={% static "styles/webdefault.css" %} rel="stylesheet" type="text/css"/>
+</head>
+
+
+
+<body>
+<header>
+  {% include "navigation.html" %}
+</header>
+
+<main>
+  <div class = "menu1">
+    <img src = "{% static "images/food1.png" %}" alt = "day one menu image" />
+    <h2>Day 1</h2>
+    <h3>Breakfast: Orange juice, Cookies, Power Bar</h3>
+    <h3>Lunch: Ice Cream, Soda, Pasta</h3>
+    <h3>Dinner: Fasting because we are HOLY</h3>
+  </div>
+  <div class = "menu2">
+    <img src = "{% static "images/food2.png" %}" alt = "day two menu image" />
+    <h2>Day 2</h2>
+    <h3>Breakfast: Cereal, Water</h3>
+    <h3>Lunch: Lasagna, Coffee</h3>
+    <h3>Dinner: Fish and Chips</h3>
+  </div>
+
+  <div class = "menu3">
+    <h2> Full Meal package: $250.00 (includes Dinner Day 2)</h2>
+    <h2> Dinner Day Two: $75.00</h2>
+  </div>
+</main>
+
+<footer>
+  <small>
+    While this web site was created to satisfy the requirement of building a web site for an academic course at Regis
+    University, the views and opinions expressed on this web site are solely those of the original author and do not
+    necessarily represent the views and opinions of Regis University.
+  </small>
+</footer>
+
+</body>
+
+
+
+</html>

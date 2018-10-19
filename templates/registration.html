@@ -1,0 +1,239 @@
+{%  load staticfiles %}
+<html>
+
+<head>
+  <meta charset = "utf-8" />
+  <meta name = "keywords"
+        content = "conference, registration, preaching, seminar" />
+  <meta name = "description"
+        content = "The registration and informational website for a ministry conference" />
+  <meta name = "author"
+        content = " Spencer B. Newburn" />
+  <meta name = "robots"
+        content = "nofollow" />
+
+  <title>Registration Form</title>
+
+  <link href="{% static "styles/webdefault.css" %}" rel="stylesheet" type="text/css"/>
+
+
+  <script>
+      {% static file_content.js %}
+  </script>
+</head>
+
+
+<body>
+<header>
+  {% include "navigation.html" %}
+</header>
+
+<main>
+  <form  name="myForm" action = {%  url 'regURL' %} method = "get">
+
+    conference Id number: <input class = "form" type = "text" name="conferenceID" id="conferenceID" size = "10" maxlength="6" value="" onchange="checkConIdNum()">
+
+
+
+    <fieldset class = "regSections">
+        <legend> Basic Information</legend>
+        <select class = "form" name = "prefix" size = "4">
+          <option value = "Mr."> Mr. </option>
+          <option value = "Mrs."> Mrs. </option>
+          <option value = "Ms"> Ms </option>
+          <option value = "none"> none </option>
+        </select>
+        <p>
+          First Name (Required):
+          <input class = "form" type = "text" name = "FirstName" size = "15" maxlength="30" placeholder="first name" required pattern="[a-zA-Z]+"/>
+          Last Name (Required):
+          <input class = "form" type = "text" name = "LastName" size = "15" maxlength="30" placeholder="last name" required pattern ="[a-zA-Z\-]+"/>
+
+        </p>
+
+        <p>
+          Address line 1 (Required):
+          <input class = "form" type = "text" name = "AddressLine1" size = "15" maxlength = "40" placeholder = "address here" required pattern = "[a-zA-Z0-9\ \#]+"/>
+        </p>
+        <p>
+          Address line 2:
+          <label>
+            <input class = "form" type = "text" name = "AddressLine2" size = "15" maxlength="40" pattern = "[a-zA-Z0-9\ \#]+"/>
+          </label>
+        </p>
+        <p>
+          City (Required):
+          <input class = "form" type = "Text" name = "City" size = "15" maxlength="30" placeholder = "city of residence" required pattern = "[a-zA-Z\]+"/>
+        </p>
+        <p>
+          State (Required):
+
+          <select class = "form" name="state" required>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="DC">DC</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+          </select>
+        </p>
+
+        <p>
+          Zip Code (Required):
+          <input class = "form" type = "text" name = "Zip" size = "15" maxlength="15" placeholder = "zip code" required pattern = "[0-9]{5}\-[0-9]{4}"/>
+        </p>
+
+        <p>
+          Telephone (Required):
+          <input class = "form" type = "text" name = "Tel" size = "15" maxlength="15" placeholder = "telephone number" required pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+        </p>
+        <p>
+          Email Address (Required):
+          <input class = "form" type = "email" name = "Email" size = "15" maxlength="15" placeholder = "email address" required pattern = "([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})"/>
+        </p>
+
+    </fieldset>
+
+    <fieldset class = "regSections">
+        <legend>Company Information</legend>
+        <p>
+          Company Website:
+          <input class = "form" type = "text" name = "CompanyWebsite" size = "15" maxlength="30" placeholder = "website"/>
+        </p>
+        <p>
+          Position in Company (Required):
+          <input class = "form" type = "text" name = "Position" size = "15" maxlength="15" placeholder = "your position" required pattern = "[a-zA-Z0-9\ \#]+"/>
+        </p>
+        <p>
+          Name of Company (Required):
+          <input class = "form" type = "text" name = "NameOfCompany" size = "15" maxlength="15" placeholder = "company name" required pattern = "[a-zA-Z0-9\ \#]+"/>
+        </p>
+    </fieldset>
+
+
+    <fieldset>
+        <legend class = "regSections">Meal Options</legend>
+        <fieldset class = "form">
+         <input type = "radio" name = "MealChoice" value = "choice" required/>Purchase the Meal Pack
+         <input type = "radio" name = "MealChoice" value = "choice" required/>Purchase JUST the day 2 dinner
+        </fieldset>
+    </fieldset>
+
+    <fieldset >
+        <legend class = "regSections">Billing Information</legend>
+        <p>
+          First Name:
+          <input class = "form" type = "text" name = "BillFirstName" size = "15" maxlength = "30" placeholder = "first name" required pattern="[a-zA-Z]+"/>
+        </p>
+        <p>
+          Last Name:
+          <input class = "form" type = "text" name = "BillLastName" size = "15" maxlength = "30" placeholder = "last name" required pattern="[a-zA-Z\-]+"/>
+        </p>
+        <fieldset class = "form">
+          <legend>Card type:</legend>
+          Visa <input type = "radio" name = "CardType"/>
+          MasterCard<input type = "radio" name = "CardType" />
+          American Express<input type = "radio" name = "CardType" />
+        </fieldset>
+        <p>
+          Card Number:
+          <input class = "form" type = "text" name = "CardNumber" size = "15" maxlength = "30" placeholder = "card number" required pattern = "[0-9]{16}"/>
+        </p>
+        <p>
+          Card Security Code:
+          <input class = "form" type="text" name = "SecurityNumber" size = "15" maxlength = "10" placeholder= "code" required pattern = "[0-9]{4}" />
+        </p>
+        <p>
+          Expiration date Year:
+          <input class = "form" type = "text" name = "EXPDateYear" size = "15" maxlength = "10" placeholder = "year" required pattern = "[2][0]([1-2][6-9])"/>
+        </p>
+        <p>
+          Expiration Date Month:
+          <input class = "form" type = "text" name = "EXPDateMonth" size = "15" maxlength = "10" placeholder = "month" required pattern = "(0[1-9]|1[0-2])"/>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend class = "regSections"> Workshop Selections</legend>
+        <fieldset class = "form">
+          <legend>Session 1</legend>
+          <input type = "radio" name = "Session1" value="A" required/>Structuring the Week (1A)
+          <input type = "radio" name = "Session1" value="B" required/>Family based Youth ministry (1B)
+          <input type = "radio" name = "Session1" value="C" required/>WHY (1C)
+        </fieldset>
+        <fieldset class = "form">
+          <legend>Session 2</legend>
+          <input type = "radio" name = "Session2" value="D" required/>The heart of preaching (2D)
+          <input type = "radio" name = "Session2" value="E" required/>Running a church summer camp (2E)
+          <input type = "radio" name = "Session2" value="F" required/>HOW (2F)
+        </fieldset>
+        <fieldset class = "form">
+          <legend>Session 3</legend>
+          <input type = "radio" name = "Session3" value="G" required/>Sermons that are effective (3G)
+          <input type = "radio" name = "Session3" value="H" required/>Crises Intervention (3H)
+          <input type = "radio" name = "Session3" value="I" required/>Building a culture of evangelism (3I)
+        </fieldset>
+    </fieldset>
+
+    <input class = "form" type = "submit" name = "subscribe" value = "SUBMIT INFORMATION" onclick="regSubmit(); writeCookie()" />
+  </form>
+</main>
+
+<footer>
+  <small>
+    While this web site was created to satisfy the requirement of building a web site for an academic course at Regis
+    University, the views and opinions expressed on this web site are solely those of the original author and do not
+    necessarily represent the views and opinions of Regis University.
+  </small>
+</footer>
+
+</body>
+
+
+
+</html>
